@@ -1,0 +1,16 @@
+# Created at 2020-03-20T15:32:30.681
+[SUREFIRE] std/in stream corrupted
+java.io.IOException: Command NOOP unexpectedly read Void data with length 4.
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:130)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+
+
+# Created at 2020-03-20T15:32:41.053
+Unexpected IOException: 7,1,ua.lviv.iot.FindGmailComTest,test,null,Unmatched closing ')' near index 25\000D\000A[\005C(w{23}?](@)[a-z](.)[a-z])\000D\000A                         ^,null,Unmatched closing ')' near index 25\000D\000A[\005C(w{23}?](@)[a-z](.)[a-z])\000D\000A                         ^,FindGmailComTest.test:9 \00BB PatternSyntax Unmatched closing ')' near index 25\000D\000A[...,java.util.regex.PatternSyntaxException: \000AUnmatched closing ')' near index 25\000D\000A[\005C(w{23}?](@)[a-z](.)[a-z])\000D\000A                         ^\000A\0009at ua.lviv.iot.FindGmailComTest.test(FindGmailComTest.java:9)\000A
+
+
+# Created at 2020-03-20T15:32:41.055
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,ua.lviv.iot.FindGmailComTest,null,null,null
+
+

@@ -1,0 +1,30 @@
+package ua.lviv.iot.RegEx;
+
+import java.util.LinkedList;
+import java.util.List;
+//import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class FindMailServisesInText{
+    public static void findMailServerInText(final String text) {
+        List<String> foundServersNames = new LinkedList<>();
+        String patternForString = "(\\@\\w+\\.\\w+)";
+        Pattern pattern = Pattern.compile(patternForString);
+        Matcher matcher = pattern.matcher(text);
+        if (matcher.find()) {
+            foundServersNames.add(matcher.group());
+            System.out.println(foundServersNames);}
+        else {
+            System.out.println("sorry couldnt found any mail servers");
+        }
+    }
+
+ /*public static String scanString() {
+    @SuppressWarnings("resource")
+    Scanner scanner = new Scanner(System.in);
+    return scanner.nextLine();
+
+ */
+}
+

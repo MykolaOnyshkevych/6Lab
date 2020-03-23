@@ -12,19 +12,16 @@ public class FindMailServisesInText{
         String patternForString = "(\\@\\w+\\.\\w+)";
         Pattern pattern = Pattern.compile(patternForString);
         Matcher matcher = pattern.matcher(text);
-        if (matcher.find()) {
+        while (matcher.find()) {
+            String stringFounder = matcher.group();
+            String newString = "";
+
+            for (int i = stringFounder.length() - 1; i > 0; i--) {
+                newString += stringFounder.charAt(i);
+            }
             foundServersNames.add(matcher.group());
-            System.out.println(foundServersNames);}
-        else {
-            System.out.println("sorry couldnt found any mail servers");
+            System.out.println(foundServersNames);
         }
     }
-
- /*public static String scanString() {
-    @SuppressWarnings("resource")
-    Scanner scanner = new Scanner(System.in);
-    return scanner.nextLine();
-
- */
 }
 

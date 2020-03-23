@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class FindMailServisesInText{
     public static void findMailServerInText(final String text) {
         List<String> foundServersNames = new LinkedList<>();
-        String patternForString = "(\\@\\w+\\.\\w+)";
+        String patternForString = "(\\(\\w+\\.)\\w+)";
         Pattern pattern = Pattern.compile(patternForString);
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {

@@ -14,10 +14,9 @@ public class FindMailServisesInText{
         Matcher matcher = pattern.matcher(text);
         while (matcher.find()) {
             String stringFounder = matcher.group();
-            String newString = "";
-
+           
             for (int i = stringFounder.length() - 1; i > 0; i--) {
-                newString += stringFounder.charAt(i);
+                stringFounder += stringFounder.charAt(i);
             }
             foundServersNames.add(matcher.group());
             System.out.println(foundServersNames);

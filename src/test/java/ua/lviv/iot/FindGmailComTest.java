@@ -19,12 +19,5 @@ public class FindGmailComTest {
         System.out.println(textToCheck);
         FindMailServisesInText.findMailServerInText(textToCheck);
     }
-    /*
-     @Test
-public void test() {
-System.out.println(" Enter your Text ");
-String textToCheck = FindMailServisesInText.scanString();
-FindMailServisesInText.findMailServerInText(textToCheck);
 
-     */
 }
